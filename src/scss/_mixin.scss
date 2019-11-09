@@ -1,0 +1,49 @@
+@mixin centering-children {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin centering-children-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin text-uppercase {
+  text-transform: uppercase;
+}
+
+@mixin respond ($breckpoint) {
+  @if $breckpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
+  @if $breckpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breckpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breckpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breckpoint == miobile-l {
+    @media only screen and (max-width: 26.56em) {
+      @content;
+    } //425px
+  }
+  @if $breckpoint == mobile-m {
+    @media only screen and (max-width: 23.43em) {
+      @content;
+    } //375px
+  }
+}

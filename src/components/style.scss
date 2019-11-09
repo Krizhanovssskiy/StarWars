@@ -1,0 +1,45 @@
+@import "../scss/mixin";
+
+.ItemDetails{
+  width: 100%;
+  &__details-box {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+    align-items: center;
+
+    @include respond(tab-port) {
+      grid-template-columns: minmax(300px, 500px);
+      justify-content: center;
+      align-items: center;
+      margin: 0 15px;
+    }
+  }
+
+  &__img-box {
+    margin-right: 50px;
+    @include respond(tab-port) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__item-detail {
+    display: flex;
+    text-transform: capitalize;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  span {
+    margin-right: 15px;
+  }
+}

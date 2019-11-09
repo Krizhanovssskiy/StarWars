@@ -1,0 +1,8 @@
+export const POPULATE_PLANETS = 'POPULATE_PLANETS';
+export const CLAER_PLANET = 'SELECT_PLANET';
+
+export const GET_ITEM = 'GET_ITEM';
+export const CLEAR_ITEM = 'CLEAR_ITEM';
+
+export const SELECT_CATEGORIES = 'SELECT_CATEGORIES';
+export const CLEAR_CATEGORIES = 'CLEAR_CATEGORIES';

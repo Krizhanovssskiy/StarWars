@@ -1,0 +1,42 @@
+@import '../../scss/mixin';
+.ListItemsScope {
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 400px));
+  grid-gap: 20px;
+  justify-content: center;
+  align-content: center;
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 200px));
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-dark-grey);
+  }
+
+  img {
+    background-position: 0 25%;
+    background-image: url(../../img/placeholder.jpg);
+    background-size: cover;
+  }
+
+  &__textBox {
+    height: 100%;
+    @include centering-children
+  }
+
+  p {
+    padding: 15px 10px;
+    font: 600 1.8rem sans-serif;
+
+    @include centering-children;
+  }
+}

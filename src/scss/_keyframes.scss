@@ -1,0 +1,29 @@
+@keyframes twinking_stars {
+  from {
+    background-position: 100px -100px, 0 0;
+  }
+
+  to {
+    background-position: 0 0, 0 0;
+  }
+}
+
+@keyframes double-ring {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes double-ring-revert {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../scss/_keyframes";
+@import "../../scss/mixin";
+
+.Loading {
+  width: 100%;
+  @include centering-children-row;
+
+  &__box {
+    position: relative;
+  }
+  &__outside {
+    position: relative;
+    border-top: 4px solid var(--color-dark-red);
+    border-bottom: 4px solid var(--color-dark-red);
+    border-radius: 50%;
+    padding: 4px;
+    width: 100px;
+    height: 100px;
+    animation: double-ring-revert 2000ms linear infinite;
+  }
+
+  &__internal {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-top: 4px solid var(--color-blue);
+    border-bottom: 4px solid var(--color-blue);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    animation: double-ring 3000ms linear infinite;
+  }
+}

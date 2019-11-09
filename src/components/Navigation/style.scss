@@ -1,0 +1,43 @@
+@import "../../scss/mixin";
+.Active {
+  background: var(--color-blue) !important;
+}
+
+.NavPage {
+  width: 100%;
+  margin: 0 0 40px;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  a {
+    @include text-uppercase;
+    font: 16px var(--color-dark-red);
+    &:visited {
+      color: var(--color-dark-red);
+    }
+  }
+
+  &__slash {
+    margin: 0 10px;
+  }
+}
+
+.ButtonsBox {
+  margin: 0 20px;
+  @include centering-children-row;
+
+  button {
+    width: 20px;
+    margin-right: 5px;
+    padding: 5px 5px;
+
+    background: var(--color-dark-grey);
+    color: var(--color-white);
+    border: 1px solid var(--color-dark-red);
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

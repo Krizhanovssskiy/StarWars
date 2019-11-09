@@ -1,0 +1,30 @@
+@import "../../scss/mixin";
+.ListCaregories {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 100fr));
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+  justify-content: center;
+  align-content: center;
+  padding: 0 20px;
+  @include respond(phone) {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 100fr));
+  }
+
+  a {
+    position: relative;
+  }
+
+  li img {
+    width: 100%;
+  }
+
+  li span {
+    position: absolute;
+    bottom: 100%;
+    padding: 0 0 0 20%;
+    color: white;
+    background: red;
+    width: 100%;
+  }
+}
